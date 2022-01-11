@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<store>
+  <section name="Classics">
+    <entry>
+      <item>Book1</item>
+      <price>22.00</price>
+    </entry>
+    <entry>
+      <item>Book2</item>
+      <price>21.00</price>
+    </entry>
+    <entry ebook="true">
+      <item>Book3</item>
+      <price>11.00</price>
+    </entry>
+  </section>
+  <section name="Fiction">
+    <entry>
+      <item>Book4</item>
+      <price>18.00</price>
+    </entry>
+    <entry>
+      <item>Book5</item>
+      <price>19.00</price>
+    </entry>
+    <entry ebook="true">
+      <item>Book6</item>
+      <price>10.00</price>
+    </entry>
+  </section>
+  <section name="Romance">
+    <entry>
+      <item>Book7</item>
+      <price>21.00</price>
+    </entry>
+    <entry>
+      <item>Book8</item>
+      <price>16.00</price>
+    </entry>
+    <entry ebook="true">
+      <item>Book9</item>
+      <price>12.00</price>
+    </entry>
+  </section>
+  <section name="Comics">
+    <entry>
+      <item>Book10</item>
+      <price>19.00</price>
+    </entry>
+    <entry>
+      <item>Book11</item>
+      <price>18.00</price>
+    </entry>
+    <entry ebook="true">
+      <item>Book12</item>
+      <price>13.00</price>
+    </entry>
+  </section>
+  <section name="Fantasy">
+    <entry>
+      <item>Book13</item>
+      <price>17.00</price>
+    </entry>
+    <entry>
+      <item>Book14</item>
+      <price>18.00</price>
+    </entry>
+    <entry ebook="true">
+      <item>Book15</item>
+      <price>10.00</price>
+    </entry>
+  </section>
+</store>
