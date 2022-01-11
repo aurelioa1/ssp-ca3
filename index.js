@@ -7,22 +7,22 @@ xsltProcess = require('xslt-processor').xsltProcess, //module allows to utilise 
 xml2js = require('xml2js'); // does xml <-> json conversion
 
 const router = express(); //router for the application
-const server = http.createServer(router); //creating server 
+      server = http.createServer(router); //creating server to run always when the aplication is open.
+router.use(express.static(path.resolve(__dirname, 'views')));// static content from view folder    
 
 router.get('/', function(req, res) { //simple transformation to aply to the xml,xsl and apply to the browswer
 
-    res.writeHead(200, {'Content-Type' : 'text/html'});// 200 tells if the page exist or not
+    res.writeHead(200, {'Content-Type' : 'text/html'});// tell the browswer to wait for the content, 200 tell if the page exist or does not
+    let xml = fs.readFileSync('DublinBooks.xml', 'utf8'),
+        xsl = fs.readFileSync('DublinBooks.xsl', 'utf8');
 
-    let xml = fs.readFileSync('DublinBooks.xml', 'utf-8');
-        xsl = fs.readFileSync('DublinBooks.xsl', 'utf-8');
+    let doc = xmlParse(xml),
+        stylesheet = xmlParse(xsl);
 
-    let doc = xmlParse(xml), 
-        stylesheet = xmlParse.xsl
-
-    let result = xsltProcess(doc, stylesheet);
+    let result = xsltProcess(doc, stylesheet); //will get the html file    
 
     res.end(result.toString());
-});
+}); 
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() //the server will listen the requests sent, and port will be provided by gitpod itself and IP provided or use the localhost
 {
